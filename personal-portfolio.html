@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khor Soon Keat | Personal Portfolio Website</title>
+  <meta name="description" content="Project details for the Personal Portfolio Website.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .portfolio-showcase {
+      padding: 0.55rem;
+      background: linear-gradient(135deg, #0f2340, #2f6fb3);
+    }
+
+    .portfolio-showcase img {
+      width: 100%;
+      display: block;
+      height: auto;
+      max-height: 420px;
+      margin: 0;
+      object-fit: contain;
+      object-position: center;
+      opacity: 0.98;
+      border-radius: 1rem;
+    }
+
+    .project-card:hover .portfolio-showcase img {
+      transform: none;
+    }
+
+    body[data-page="projects"] .portfolio-output-gallery .gallery-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    body[data-page="projects"] .portfolio-output-gallery .gallery-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: top center;
+      padding: 0;
+      background: #eef7ff;
+    }
+
+    body[data-page="projects"] .portfolio-output-gallery .gallery-card figcaption {
+      padding: 1rem 1.15rem 1.2rem;
+      min-height: auto;
+    }
+
+    body[data-page="projects"] .portfolio-output-gallery .gallery-card figcaption strong {
+      display: block;
+      font-size: 1.05rem;
+      line-height: 1.3;
+      color: var(--heading);
+      margin-bottom: 0.3rem;
+    }
+
+    body[data-page="projects"] .portfolio-output-gallery .gallery-card figcaption span {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      color: var(--text-soft);
+      font-weight: 600;
+    }
+
+    @media (max-width: 767px) {
+      body[data-page="projects"] .portfolio-output-gallery .gallery-card img {
+        height: 220px;
+      }
+
+      .portfolio-showcase {
+        padding: 0.45rem;
+      }
+
+      .portfolio-showcase img {
+        width: 100%;
+        max-height: 260px;
+        margin: 0;
+        object-position: center;
+      }
+    }
+  </style>
+</head>
+<body data-page="projects">
+  <header class="navbar" id="top">
+    <div class="container nav-content">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">
+          <img src="images/avatar.png" alt="Khor Soon Keat profile photo">
+        </span>
+        <span class="brand-text">Khor Soon Keat</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link" data-page-link="home">Home</a>
+        <a href="about.html" class="nav-link" data-page-link="about">About Me</a>
+        <a href="academic.html" class="nav-link" data-page-link="academic">Academic Background</a>
+        <a href="skills.html" class="nav-link" data-page-link="skills">Skills</a>
+        <a href="projects.html" class="nav-link" data-page-link="projects">Projects</a>
+        <a href="qualities.html" class="nav-link" data-page-link="qualities">Qualities</a>
+        <a href="experience.html" class="nav-link" data-page-link="experience">Experience</a>
+        <a href="gallery.html" class="nav-link" data-page-link="gallery">Gallery</a>
+        <a href="contact.html" class="nav-link" data-page-link="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-shell">
+      <div class="container">
+        <div class="page-intro reveal">
+          <p class="section-tag">Project Details</p>
+          <h1>Personal Portfolio Website</h1>
+          <p>Responsive personal website developed to showcase my academic background, skills, experience, resume, and selected student projects.</p>
+        </div>
+
+        <div class="soft-card project-card reveal">
+          <div class="project-showcase-thumb project-showcase-thumb-large project-showcase-no-icon clickable-preview portfolio-showcase" data-preview-src="images/portfolio-dlm.png" data-preview-title="Personal Portfolio Website">
+            <img src="images/portfolio-dlm.png" alt="Personal Portfolio Website main preview">
+            <div class="project-showcase-overlay"></div>
+          </div>
+          <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+          <span class="card-badge">Personal Project</span>
+          <h3>Personal Portfolio Website</h3>
+          <div class="project-tags">
+            <span class="tag-label">Tags:</span>
+            <span class="tag-badge">HTML</span>
+            <span class="tag-badge">CSS</span>
+            <span class="tag-badge">JAVASCRIPT</span>
+            <span class="tag-badge">GITHUB PAGES</span>
+          </div>
+          <p>This is a personal portfolio website developed to showcase my academic background, technical skills, experience, resume, and selected student projects. The website uses a clean blue-themed responsive design and is built using HTML, CSS, and JavaScript.</p>
+          <div class="education-actions">
+            <a href="https://soonkeat4762-star.github.io/personal-portfolio/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">View Live Website</a>
+            <a href="https://github.com/soonkeat4762-star/personal-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small"><i class="fa-brands fa-github"></i>&nbsp;GitHub Repository</a>
+            <a href="projects.html" class="btn btn-secondary btn-small" data-loading-link data-loading-text="Loading Projects...">Back to Projects</a>
+          </div>
+        </div>
+
+        <div class="about-grid project-info-grid project-info-grid-three">
+          <article class="soft-card project-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-circle-info"></i></div>
+            <h3>Overview</h3>
+            <p>The portfolio website presents my personal information, academic background, technical skills, experience, resume, and selected student projects in a clean and responsive layout.</p>
+          </article>
+
+          <article class="soft-card project-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Technologies Used</h3>
+            <ul class="experience-list">
+              <li><i class="fa-solid fa-check"></i><span>HTML</span></li>
+              <li><i class="fa-solid fa-check"></i><span>CSS</span></li>
+              <li><i class="fa-solid fa-check"></i><span>JavaScript</span></li>
+              <li><i class="fa-solid fa-check"></i><span>GitHub Pages</span></li>
+            </ul>
+          </article>
+
+          <article class="soft-card project-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-list-check"></i></div>
+            <h3>Website Features</h3>
+            <ul class="experience-list">
+              <li><i class="fa-solid fa-check"></i><span>Home page</span></li>
+              <li><i class="fa-solid fa-check"></i><span>About Me page</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Academic Background page</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Skills page</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Projects page</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Qualities page</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Experience page</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Gallery page</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Contact page</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Resume viewer</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Responsive layout</span></li>
+              <li><i class="fa-solid fa-check"></i><span>GitHub Pages deployment</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="section-heading reveal project-screenshot-heading">
+          <p class="section-tag">Project Output</p>
+          <h2>Website Page Screenshots</h2>
+          <p>A collection of key pages from the Personal Portfolio Website.</p>
+        </div>
+
+        <div class="gallery-grid portfolio-output-gallery">
+          <figure class="soft-card gallery-card reveal">
+            <img src="images/Home-About-Me-Page.png" alt="Home Page and About Me Page screenshot">
+            <figcaption><strong>Home Page &amp; About Me Page</strong><span>Main introduction and personal profile pages.</span></figcaption>
+          </figure>
+          <figure class="soft-card gallery-card reveal">
+            <img src="images/Skills_QualitiesPage.png" alt="Skills Page and Qualities Page screenshot">
+            <figcaption><strong>Skills Page &amp; Qualities Page</strong><span>Technical skills and personal qualities sections.</span></figcaption>
+          </figure>
+          <figure class="soft-card gallery-card reveal">
+            <img src="images/ContactGalleryPage.png" alt="Contact Page and Gallery Page screenshot">
+            <figcaption><strong>Contact Page &amp; Gallery Page</strong><span>Contact form and gallery display.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Khor Soon Keat. Personal Portfolio Website.</p>
+      <a href="#" id="backToTop" class="back-top">Back to Top</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

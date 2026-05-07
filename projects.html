@@ -132,6 +132,20 @@
       background: rgba(4, 11, 20, 0.42);
     }
 
+    body[data-page="projects"] .preview-personal-portfolio {
+      background: linear-gradient(135deg, #0f2340 0%, #2f6fb3 52%, #b7e3ff 100%);
+    }
+
+    body[data-page="projects"] .preview-personal-portfolio .project-preview-header {
+      min-height: 4.8rem;
+    }
+
+    body[data-page="projects"] .preview-personal-portfolio img {
+      height: 150px;
+      padding: 0.45rem;
+      background: rgba(7, 17, 31, 0.2);
+    }
+
     body[data-page="projects"] .preview-ikan-puyu {
       background: linear-gradient(135deg, #0d2237 0%, #1d5a73 55%, #77c6d8 100%);
     }
@@ -155,6 +169,11 @@
 
     body[data-page="projects"] .projects-grid {
       align-items: stretch;
+    }
+
+    body[data-page="projects"] .personal-projects-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.5rem;
     }
 
     body[data-page="projects"] .project-card {
@@ -192,6 +211,12 @@
       margin-bottom: 0.45rem;
     }
 
+    @media (max-width: 1200px) {
+      body[data-page="projects"] .personal-projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 767px) {
       body[data-page="projects"] .project-preview-card {
         min-height: 246px;
@@ -221,6 +246,10 @@
       body[data-page="projects"] .project-card > p {
         min-height: auto;
         -webkit-line-clamp: unset;
+      }
+
+      body[data-page="projects"] .personal-projects-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -460,6 +489,31 @@
             </div>
             <p>A Workshop 1 personal project developed to manage student records, lecturer accounts, scores, grades, feedback, and performance reports using a menu-based C++ system with MySQL database support.</p>
             <a href="student-performance-system.html" class="card-link" data-loading-link data-loading-text="Loading Project Details...">View Details <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="soft-card project-card reveal">
+            <div class="project-preview-card preview-personal-portfolio">
+              <div class="project-preview-header">
+                <h3>Personal Portfolio Website</h3>
+                <p>Responsive personal website hosted with GitHub Pages</p>
+              </div>
+              <img src="images/portfolio-preview.png" alt="Personal Portfolio Website project preview">
+              <div class="project-preview-overlay-icon">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+            </div>
+            <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+            <span class="card-badge">Personal Project</span>
+            <h3>Personal Portfolio Website</h3>
+            <div class="project-tags">
+              <span class="tag-label">Tags:</span>
+              <span class="tag-badge">HTML</span>
+              <span class="tag-badge">CSS</span>
+              <span class="tag-badge">JAVASCRIPT</span>
+              <span class="tag-badge">GITHUB PAGES</span>
+            </div>
+            <p>A personal portfolio website developed to showcase my academic background, skills, experience, resume, and selected student projects using HTML, CSS, JavaScript, and GitHub Pages.</p>
+            <a href="personal-portfolio.html" class="card-link" data-loading-link data-loading-text="Loading Project Details...">View Details <i class="fa-solid fa-arrow-right"></i></a>
           </article>
         </div>
       </div>

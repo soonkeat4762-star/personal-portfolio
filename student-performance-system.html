@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khor Soon Keat | Student Performance Management System</title>
+  <meta name="description" content="Project details for the Student Performance Management System.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .student-performance-showcase {
+      padding: 0.55rem;
+      background: linear-gradient(135deg, #10213a, #2b72b0);
+    }
+
+    .student-performance-showcase img {
+      width: 100%;
+      display: block;
+      height: auto;
+      max-height: 420px;
+      margin: 0;
+      object-fit: contain;
+      object-position: center;
+      opacity: 0.98;
+      border-radius: 1rem;
+    }
+
+    .project-card:hover .student-performance-showcase img {
+      transform: none;
+    }
+
+    @media (max-width: 767px) {
+      .student-performance-showcase {
+        padding: 0.45rem;
+      }
+
+      .student-performance-showcase img {
+        width: 100%;
+        max-height: 260px;
+        margin: 0;
+        object-position: center;
+      }
+    }
+  </style>
+</head>
+<body data-page="projects">
+  <header class="navbar" id="top">
+    <div class="container nav-content">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">
+          <img src="images/avatar.png" alt="Khor Soon Keat profile photo">
+        </span>
+        <span class="brand-text">Khor Soon Keat</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link" data-page-link="home">Home</a>
+        <a href="about.html" class="nav-link" data-page-link="about">About Me</a>
+        <a href="academic.html" class="nav-link" data-page-link="academic">Academic Background</a>
+        <a href="skills.html" class="nav-link" data-page-link="skills">Skills</a>
+        <a href="projects.html" class="nav-link" data-page-link="projects">Projects</a>
+        <a href="qualities.html" class="nav-link" data-page-link="qualities">Qualities</a>
+        <a href="experience.html" class="nav-link" data-page-link="experience">Experience</a>
+        <a href="gallery.html" class="nav-link" data-page-link="gallery">Gallery</a>
+        <a href="contact.html" class="nav-link" data-page-link="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-shell">
+      <div class="container">
+        <div class="page-intro reveal">
+          <p class="section-tag">Project Details</p>
+          <h1>Student Performance Management System</h1>
+          <p>Workshop 1 personal project focused on student records, grade management, and performance reporting.</p>
+        </div>
+
+        <div class="soft-card project-card reveal">
+          <div class="project-showcase-thumb project-showcase-thumb-large project-showcase-no-icon clickable-preview student-performance-showcase" data-preview-src="images/student-performance-main-dlm.png" data-preview-title="Student Performance Management System">
+            <img src="images/student-performance-main-dlm.png" alt="Student Performance Management System preview image">
+            <div class="project-showcase-overlay"></div>
+          </div>
+          <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <span class="card-badge">Personal Project</span>
+          <h3>Student Performance Management System</h3>
+          <div class="project-tags">
+            <span class="tag-label">Tags:</span>
+            <span class="tag-badge">C++</span>
+            <span class="tag-badge">MYSQL</span>
+            <span class="tag-badge">DATABASE</span>
+            <span class="tag-badge">CONSOLE SYSTEM</span>
+          </div>
+          <p>This project presents the development of a Student Performance Management System, created as a Workshop 1 personal project. The system is designed to help manage student information, lecturer accounts, course details, scores, grades, feedback, and performance reports through a menu-based C++ console application. It also uses MySQL database support to store and organize system data more efficiently, helping reduce manual work and improve the accuracy of student performance management.</p>
+          <div class="education-actions">
+            <a href="https://github.com/soonkeat4762-star/Student-Performance-Management-System" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small">GitHub Repository</a>
+            <a href="projects.html" class="btn btn-secondary btn-small">Back to Projects</a>
+          </div>
+        </div>
+
+        <div class="about-grid project-info-grid project-info-grid-three">
+          <article class="soft-card project-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-user-gear"></i></div>
+            <h3>My Contribution</h3>
+            <ul class="experience-list">
+              <li><i class="fa-solid fa-check"></i><span>Designed and developed the menu-based C++ system</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Created user role flows for admin, lecturer, and student users</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Designed the database structure for student records, scores, courses, feedback, and grade definitions</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Implemented score and grade management functions</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Added search, update, delete, and report-related functions</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Prepared the Workshop 1 final report and system documentation</span></li>
+            </ul>
+          </article>
+
+          <article class="soft-card project-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Tools Used</h3>
+            <ul class="experience-list">
+              <li><i class="fa-solid fa-check"></i><span>C++</span></li>
+              <li><i class="fa-solid fa-check"></i><span>MySQL</span></li>
+              <li><i class="fa-solid fa-check"></i><span>MySQL Workbench</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Database Design</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Console Interface</span></li>
+            </ul>
+          </article>
+
+          <article class="soft-card project-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-list-check"></i></div>
+            <h3>Features</h3>
+            <ul class="experience-list">
+              <li><i class="fa-solid fa-check"></i><span>User registration and login</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Admin, lecturer, and student role management</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Student account management</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Lecturer account management</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Course management</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Student mark input and update</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Grade calculation and grade distribution analysis</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Student feedback management</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Report viewing and download support</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Database ERD and structured data storage</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="section-heading reveal project-screenshot-heading">
+          <p class="section-tag">System Screenshots</p>
+          <h2>Student Performance System Interface</h2>
+          <p>A collection of key screens from the Workshop 1 Student Performance Management System.</p>
+        </div>
+
+        <div class="gallery-grid tts-gallery student-performance-gallery">
+          <figure class="soft-card gallery-card reveal">
+            <img src="images/student-performance-main-login.png" alt="Main menu and login interface of the Student Performance Management System">
+            <figcaption>Main Menu and Login Interface</figcaption>
+          </figure>
+          <figure class="soft-card gallery-card reveal">
+            <img src="images/student-performance-grade-analysis.png" alt="Student marks, grade distribution, and pass fail analysis screens">
+            <figcaption>Student Grade Analysis</figcaption>
+          </figure>
+          <figure class="soft-card gallery-card reveal">
+            <img src="images/student-performance-erd.png" alt="Database ERD design for the Student Performance Management System">
+            <figcaption>Database ERD Design</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Khor Soon Keat. Personal Portfolio Website.</p>
+      <a href="#" id="backToTop" class="back-top">Back to Top</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

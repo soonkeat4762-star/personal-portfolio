@@ -167,7 +167,7 @@
       background: linear-gradient(135deg, #142547 0%, #3158a3 50%, #8aabff 100%);
     }
 
-    body[data-page="projects"] .projects-grid {
+    body[data-page="projects"] .personal-projects-grid {
       align-items: stretch;
     }
 
@@ -176,13 +176,32 @@
       gap: 1.5rem;
     }
 
-    body[data-page="projects"] .project-card {
+    body[data-page="projects"] .personal-projects-grid .project-card {
       display: flex;
       flex-direction: column;
       height: 100%;
     }
 
-    body[data-page="projects"] .project-card > h3 {
+    body[data-page="projects"] .personal-projects-grid .project-preview-card {
+      height: 272px;
+      min-height: 272px;
+    }
+
+    body[data-page="projects"] .personal-projects-grid .project-preview-header {
+      min-height: 5rem;
+    }
+
+    body[data-page="projects"] .personal-projects-grid .project-preview-card img,
+    body[data-page="projects"] .personal-projects-grid .preview-student-performance img {
+      height: 150px;
+    }
+
+    body[data-page="projects"] .personal-projects-grid .card-badge {
+      min-height: 3.65rem;
+      align-self: flex-start;
+    }
+
+    body[data-page="projects"] .personal-projects-grid .project-card > h3 {
       min-height: 4.2rem;
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -190,12 +209,12 @@
       overflow: hidden;
     }
 
-    body[data-page="projects"] .project-tags {
+    body[data-page="projects"] .personal-projects-grid .project-tags {
       min-height: 5.2rem;
       align-content: flex-start;
     }
 
-    body[data-page="projects"] .project-card > p {
+    body[data-page="projects"] .personal-projects-grid .project-card > p {
       min-height: 8.8rem;
       display: -webkit-box;
       -webkit-line-clamp: 5;
@@ -203,11 +222,11 @@
       overflow: hidden;
     }
 
-    body[data-page="projects"] .project-card .card-link {
+    body[data-page="projects"] .personal-projects-grid .project-card .card-link {
       margin-top: auto;
     }
 
-    body[data-page="projects"] .tag-badge {
+    body[data-page="projects"] .personal-projects-grid .tag-badge {
       margin-bottom: 0.45rem;
     }
 
@@ -241,9 +260,14 @@
         font-size: 1.45rem;
       }
 
-      body[data-page="projects"] .project-card > h3,
-      body[data-page="projects"] .project-tags,
-      body[data-page="projects"] .project-card > p {
+      body[data-page="projects"] .personal-projects-grid .project-preview-card {
+        height: auto;
+      }
+
+      body[data-page="projects"] .personal-projects-grid .project-card > h3,
+      body[data-page="projects"] .personal-projects-grid .card-badge,
+      body[data-page="projects"] .personal-projects-grid .project-tags,
+      body[data-page="projects"] .personal-projects-grid .project-card > p {
         min-height: auto;
         -webkit-line-clamp: unset;
       }

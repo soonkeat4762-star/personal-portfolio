@@ -1466,7 +1466,7 @@ body[data-page="academic"] .education-card:hover .education-media img {
   animation-delay: 0.3s;
 }
 
-body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery) .gallery-card {
+body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery, .securevision-gallery) .gallery-card {
   position: relative;
   overflow: hidden;
   padding: 0;
@@ -1474,7 +1474,7 @@ body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .i
   border: 1px solid #dcecff;
 }
 
-body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery) .gallery-card img {
+body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery, .securevision-gallery) .gallery-card img {
   width: 100%;
   height: 280px;
   object-fit: contain;
@@ -1490,7 +1490,7 @@ body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .i
   cursor: zoom-in;
 }
 
-body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery) .gallery-card:hover img {
+body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery, .securevision-gallery) .gallery-card:hover img {
   transform: scale(1.03);
 }
 
@@ -1500,7 +1500,7 @@ body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .i
   font-weight: 700;
 }
 
-body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery) .gallery-card::before {
+body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery, .securevision-gallery) .gallery-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1510,7 +1510,7 @@ body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .i
   z-index: 2;
 }
 
-body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery) .gallery-card::after {
+body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery, .securevision-gallery) .gallery-card::after {
   content: "";
   position: absolute;
   top: 1.15rem;
@@ -1522,7 +1522,7 @@ body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .i
   box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.7);
 }
 
-body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery) .gallery-card figcaption {
+body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery, .securevision-gallery) .gallery-card figcaption {
   position: relative;
   z-index: 3;
   padding: 1rem 1.15rem 1.2rem;
@@ -1591,6 +1591,148 @@ body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .i
 
 .project-info-grid-three {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* SecureVision reuses the existing project card and detail page components. */
+body[data-page="projects"] .preview-securevision {
+  background: linear-gradient(135deg, #0f2340 0%, #1a4f86 52%, #79b9ff 100%);
+}
+
+body[data-page="projects"] .personal-projects-grid .preview-securevision .project-preview-header {
+  min-height: auto;
+  flex-shrink: 0;
+}
+
+body[data-page="projects"] .personal-projects-grid .project-card.securevision-project-card > h3 {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+.securevision-preview-screens {
+  position: relative;
+  flex: 1;
+  min-height: 110px;
+}
+
+body[data-page="projects"] .personal-projects-grid .preview-securevision .securevision-preview-screens img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 82%;
+  height: 95px;
+  margin: 0;
+  padding: 0.3rem;
+  object-fit: contain;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(7, 17, 31, 0.35);
+  transform: rotate(-7deg);
+}
+
+body[data-page="projects"] .personal-projects-grid .preview-securevision .securevision-preview-screens img:nth-child(2) {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  transform: rotate(7deg);
+}
+
+body[data-page="projects"] .preview-securevision .project-preview-overlay-icon {
+  top: 50%;
+  z-index: 2;
+  background: rgba(15, 35, 64, 0.56);
+}
+
+body[data-page="projects"] .project-card:hover .preview-securevision .securevision-preview-screens img:first-child {
+  transform: rotate(-7deg) scale(1.03);
+}
+
+body[data-page="projects"] .project-card:hover .preview-securevision .securevision-preview-screens img:nth-child(2) {
+  transform: rotate(7deg) scale(1.03);
+}
+
+/* Share the project gallery layout, with a soft accent for each screen. */
+.securevision-gallery {
+  --gallery-accent: #6c9cdb;
+  --gallery-tint: #edf5ff;
+}
+
+body[data-page="projects"] .securevision-gallery .gallery-card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #ffffff, var(--gallery-tint));
+}
+
+body[data-page="projects"] .securevision-gallery .gallery-card img {
+  background: radial-gradient(circle at center, #ffffff 0%, var(--gallery-tint) 70%);
+}
+
+body[data-page="projects"] .securevision-gallery .gallery-card::before,
+body[data-page="projects"] .securevision-gallery .gallery-card::after {
+  background: var(--gallery-accent);
+}
+
+.securevision-gallery .gallery-card:nth-child(2) {
+  --gallery-accent: #74aa8a;
+  --gallery-tint: #edf8f1;
+}
+
+.securevision-gallery .gallery-card:nth-child(3) {
+  --gallery-accent: #a18ac4;
+  --gallery-tint: #f3effa;
+}
+
+.securevision-gallery .gallery-card:nth-child(4) {
+  --gallery-accent: #65a6a2;
+  --gallery-tint: #edf8f7;
+}
+
+.securevision-gallery .gallery-card:nth-child(5) {
+  --gallery-accent: #c99a6d;
+  --gallery-tint: #fbf3eb;
+}
+
+.securevision-gallery .gallery-card:nth-child(6) {
+  --gallery-accent: #6baabc;
+  --gallery-tint: #edf8fc;
+}
+
+.securevision-gallery .gallery-card:nth-child(7) {
+  --gallery-accent: #8491c7;
+  --gallery-tint: #f0f2fb;
+}
+
+.securevision-gallery .gallery-card:nth-child(8) {
+  --gallery-accent: #bd8caa;
+  --gallery-tint: #faeff6;
+}
+
+.securevision-gallery .gallery-card:nth-child(9) {
+  --gallery-accent: #96a879;
+  --gallery-tint: #f3f7ed;
+}
+
+.securevision-gallery .gallery-card:nth-child(10) {
+  --gallery-accent: #859eb7;
+  --gallery-tint: #eff4f9;
+}
+
+.securevision-gallery .gallery-card figcaption {
+  flex: 1;
+}
+
+.securevision-gallery figcaption strong,
+.securevision-gallery figcaption span {
+  display: block;
+}
+
+.securevision-gallery figcaption span {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text-soft);
+  font-weight: 600;
 }
 
 body[data-page="about"] .about-page-shell,
@@ -3745,7 +3887,7 @@ body[data-page="qualities"] .qualities-summary p {
     max-height: 220px;
   }
 
-  body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery) .gallery-card img {
+  body[data-page="projects"] :is(.e-note-gallery, .tts-gallery, .waste-gallery, .ikan-puyu-gallery, .securevision-gallery) .gallery-card img {
     height: 260px;
     padding: 0.75rem;
   }

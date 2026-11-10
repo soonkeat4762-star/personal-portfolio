@@ -172,7 +172,8 @@
     }
 
     body[data-page="projects"] .personal-projects-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-rows: 1fr;
       gap: 1.5rem;
     }
 
@@ -222,6 +223,12 @@
       overflow: hidden;
     }
 
+    body[data-page="projects"] .personal-projects-grid .project-card.securevision-project-card > p {
+      display: block;
+      -webkit-line-clamp: unset;
+      overflow: visible;
+    }
+
     body[data-page="projects"] .personal-projects-grid .project-card .card-link {
       margin-top: auto;
     }
@@ -230,7 +237,7 @@
       margin-bottom: 0.45rem;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1024px) {
       body[data-page="projects"] .personal-projects-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -440,6 +447,33 @@
         </div>
 
         <div class="projects-grid personal-projects-grid">
+          <article class="soft-card project-card reveal securevision-project-card">
+            <div class="project-preview-card preview-securevision">
+              <div class="project-preview-header">
+                <h3>SecureVision &ndash; CCTV-Based Intrusion Detection System</h3>
+                <p>AI-powered CCTV monitoring and intrusion detection system</p>
+              </div>
+              <div class="securevision-preview-screens">
+                <img src="images/02_Admin_Dashboard_Live_Monitoring_Controls.png" width="1077" height="585" loading="lazy" alt="SecureVision admin dashboard with camera and monitoring controls">
+                <img src="images/04_Intrusion_Records.png" width="1917" height="866" loading="lazy" alt="SecureVision intrusion records dashboard">
+                <div class="project-preview-overlay-icon" aria-hidden="true">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+              </div>
+            </div>
+            <div class="project-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+            <span class="card-badge">Final Year Project (FYP 1 &amp; FYP 2)</span>
+            <h3>SecureVision &ndash; CCTV-Based Intrusion Detection System</h3>
+            <div class="project-tags">
+              <span class="tag-label">Tags:</span>
+              <span class="tag-badge">PYTHON</span>
+              <span class="tag-badge">FLASK</span>
+              <span class="tag-badge">YOLOV8</span>
+            </div>
+            <p>Developed SecureVision, an AI-powered CCTV intrusion detection system using YOLOv8 and FaceNet. The system detects unauthorized persons in restricted areas, recognizes registered individuals, and sends real-time alerts through Telegram and email. It also includes a Flask web dashboard for live monitoring, attendance tracking, intrusion records, and security management.</p>
+            <a href="securevision.html" class="card-link" data-loading-link data-loading-text="Loading Project Details...">View Details <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
           <article class="soft-card project-card reveal">
             <div class="project-preview-card preview-e-note">
               <div class="project-preview-header">
